@@ -17,6 +17,7 @@ import defaultFonts from 'constants/defaultFonts';
 import isContentEditWarningHidden from 'helpers/isContentEditWarningHidden';
 import defaultDateTimeFormats from 'constants/defaultDateTimeFormats';
 import { redactionTypeMap } from 'constants/redactionTypes';
+import PageNavOverlay from '../components/PageNavOverlay';
 
 const { ToolNames } = window.Core.Tools;
 
@@ -81,6 +82,11 @@ export default {
           dataElement: 'zoomOverlayButton',
           element: 'zoomOverlay',
           hiddenOnMobileDevice: true,
+        },
+        {
+          type: 'customElement',
+          render: () => <PageNavOverlay />,
+          dataElement: 'pageNavOverlay',
         },
         { type: 'divider', hidden: ['small-mobile', 'mobile', 'tablet'] },
         { type: 'toolButton', toolName: 'Pan' },
