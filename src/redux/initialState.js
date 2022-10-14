@@ -15,6 +15,7 @@ import localStorageManager from 'helpers/localStorageManager';
 import { undoButton, redoButton } from 'helpers/commonToolbarElements';
 import defaultFonts from 'constants/defaultFonts';
 import isContentEditWarningHidden from 'helpers/isContentEditWarningHidden';
+import presetCropDimensions from 'constants/presetCropDimensions';
 import defaultDateTimeFormats from 'constants/defaultDateTimeFormats';
 import { redactionTypeMap } from 'constants/redactionTypes';
 import PageNavOverlay from '../components/PageNavOverlay';
@@ -86,7 +87,6 @@ export default {
         {
           type: 'customElement',
           render: () => <PageNavOverlay />,
-          dataElement: 'pageNavOverlay',
         },
         { type: 'divider', hidden: ['small-mobile', 'mobile', 'tablet'] },
         { type: 'toolButton', toolName: 'Pan' },
@@ -964,6 +964,7 @@ export default {
     fonts: defaultFonts,
     shouldResetAudioPlaybackPosition: false,
     activeSoundAnnotation: null,
+    presetCropDimensions,
     dateTimeFormats: defaultDateTimeFormats,
     thumbnailSelectionMode: 'checkbox',
     annotationFilters: {
