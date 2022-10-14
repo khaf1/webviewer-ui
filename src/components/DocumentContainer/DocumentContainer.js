@@ -330,13 +330,13 @@ class DocumentContainer extends React.PureComponent {
                   marginLeft: `${isLeftPanelOpen ? leftPanelWidth : 0}px`,
                 }}
               >
-                {showPageNav &&
+                {/* {showPageNav && (
                   <PageNavOverlay
                     showNavOverlay={this.state.showNavOverlay}
                     onMouseEnter={this.pageNavOnMouseEnter}
                     onMouseLeave={this.pageNavOnMouseLeave}
                   />
-                }
+                )} */}
 
                 {(isMobile && !isInDesktopOnlyMode) && <ToolsOverlay />}
               </div>
